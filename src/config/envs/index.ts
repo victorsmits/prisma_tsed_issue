@@ -21,8 +21,4 @@ interface Env {
 export const isProduction = process.env.NODE_ENV === 'production';
 export const isNextApi = process.env.NEXT_API === 'yes';
 console.log("isNextApi",isNextApi);
-export const envs = loadConfiguration<Env>(isProduction
-    ? (
-        isNextApi ? 'env.dev.yml' : 'env.prod.yml'
-    )
-    : 'env.local.yml');
+export const envs = loadConfiguration<Env>('env.local.yml' );

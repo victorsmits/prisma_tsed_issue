@@ -1,0 +1,1 @@
+export { PhoneImageModel } from "./PhoneImageModel";

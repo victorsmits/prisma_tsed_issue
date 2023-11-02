@@ -1,6 +1,6 @@
 import {Get, Returns} from '@tsed/schema';
 import {Controller, Inject} from '@tsed/di';
-import {PhoneImageModel, PhoneImagesRepository} from '@tsed/prisma';
+import {PhoneImageModel, PhoneImagesRepository} from "../../__generated__";
 
 @Controller('/pictures')
 export class PicturesController {

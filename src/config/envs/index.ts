@@ -1,5 +1,4 @@
-import {loadConfiguration} from '@vicgrk/config';
-import dotenv from 'dotenv';
+import {loadConfiguration} from "@vicgrk/config";
 
 interface Env {
   security: {
@@ -18,7 +17,7 @@ interface Env {
   };
 }
 
-export const isProduction = process.env.NODE_ENV === 'production';
-export const isNextApi = process.env.NEXT_API === 'yes';
-console.log("isNextApi",isNextApi);
-export const envs = loadConfiguration<Env>('env.local.yml' );
+export const isProduction = process.env.NODE_ENV === "production";
+export const isNextApi = process.env.NEXT_API === "yes";
+console.log("isNextApi", isNextApi);
+export const envs = loadConfiguration<Env>("env.local.yml");

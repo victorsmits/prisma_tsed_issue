@@ -3,16 +3,17 @@ generator client {
   binaryTargets = ["native", "linux-musl"]
 }
 
-generator TSED {
-  provider = "TSED-prisma"
+generator tsed {
+  provider = "tsed-prisma"
+  output   = "../src/__generated__"
 }
 
 datasource db {
   provider = "mysql"
-  url      = env("DATABASE_URL")
+  url      = "mysql://root:changeMe@localhost:3306/my-db"
 }
 
-model phone_image {
+model PhoneImage {
   id       Int       @id @default(autoincrement())
   playerId Int?
   url      String?   @db.Char(255)
